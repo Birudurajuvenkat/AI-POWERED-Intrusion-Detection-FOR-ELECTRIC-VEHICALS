@@ -199,7 +199,7 @@ async function checkIntrusion(){
         if(data.result.includes("Intrusion")){
             result.innerText = data.result;
             result.className = "status error";
-            sms.innerText = "📩 Alert sent to user & network provider";
+            sms.innerText = "🚨 Alert displayed on dashboard";
             showPopup("🚨 Intrusion detected! Immediate action required.");
         }else{
             result.innerText = data.result;
@@ -229,7 +229,7 @@ in-vehicle network traffic using artificial intelligence.
 
 <div class="inputs">
 <input type="number" id="length" placeholder="Packet Length (e.g., 1200)">
-<input type="number" id="protocol" placeholder="Protocol (6 = TCP, 17 = UDP)">
+<input type="number" id="protocol" placeholder="Protocol (1 = TCP, 2 = UDP)">
 </div>
 
 <button onclick="checkIntrusion()">Analyze Traffic</button>
